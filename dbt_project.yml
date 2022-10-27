@@ -46,6 +46,11 @@ models:
       sats:
         tags:
           - 'satellite'
+    consumption_layer:
+      tags:
+        - 'consumption_layer'
+      enabled: true
+      materialized: view
 vars:
   hash: SHA
   null_key_required: '-1' # Default -1, allows user to configure

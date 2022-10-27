@@ -9,4 +9,4 @@ c.CUSTOMER_NUMBER
 from
     {{ source('dbtvault_bigquery_demo', 'repl_orders') }} as o
 left join
-    {{ source('dbtvault_bigquery_demo', 'repl_customers') }} as c on c.customer_id = o.customer_id
+    {{ source('dbtvault_bigquery_demo', 'repl_UK_customers') }} as c on c.customer_id = o.customer_id

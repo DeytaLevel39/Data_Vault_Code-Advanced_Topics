@@ -1,8 +1,8 @@
 {%- set yaml_metadata -%}
-source_model: 'v_raw_customers'
+source_model: 'v_raw_US_customers'
 derived_columns:
   CUSTOMER_KEY: 'CUSTOMER_NUMBER'
-  RECORD_SOURCE: '!SALESFORCE'
+  RECORD_SOURCE: '!101'
   EFFECTIVE_FROM: 'LASTMODIFIEDDATE'
 hashed_columns:
   CUSTOMER_HK: 'CUSTOMER_KEY'
@@ -13,6 +13,7 @@ hashed_columns:
       - 'CUSTOMER_ID'
       - 'FIRST_NAME'
       - 'LAST_NAME'
+      - 'APPLIEDDATE'
       - 'CRUD_FLAG'
 {%- endset -%}
 

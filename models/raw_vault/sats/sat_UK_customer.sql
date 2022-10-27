@@ -1,7 +1,7 @@
-{%- set source_model = "v_stg_customers" -%}
+{%- set source_model = "v_stg_UK_customers"   -%}
 {%- set src_pk = "CUSTOMER_HK" -%}
 {%- set src_hashdiff = "CUSTOMER_HASHDIFF" -%}
-{%- set src_payload = ["CUSTOMER_ID", "FIRST_NAME", "LAST_NAME","CRUD_FLAG","LASTMODIFIEDDATE","CREATEDDATE"] -%}
+{%- set src_payload = ["CUSTOMER_ID", "FIRST_NAME", "LAST_NAME","CRUD_FLAG","LASTMODIFIEDDATE","CREATEDDATE","APPLIEDDATE"] -%}
 {%- set src_eff = "EFFECTIVE_FROM" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
