@@ -1,6 +1,8 @@
 with
     h as
-        (select customer_hk, customer_number, record_source
+        (select customer_hk, customer_number, record
+
+        _source
         from {{ ref('hub_customer') }}),
     s_uk as
         (select customer_hk, customer_id, first_name, last_name, lastmodifieddate, createddate,
