@@ -1,27 +1,16 @@
 {%- set yaml_metadata -%}
-source_model: 'v_raw_UK_customers'
+source_model: 'v_raw_customer_wealth_brackets'
 derived_columns:
-  CUSTOMER_KEY: 'CUSTOMER_NUMBER'
   CUSTOMER_WEALTH_BRACKET_KEY: 'ID'
-  RECORD_SOURCE: '!1'
+  RECORD_SOURCE: '!2'
   EFFECTIVE_FROM: 'LASTMODIFIEDDATE'
 hashed_columns:
-  CUSTOMER_HK: 'CUSTOMER_KEY'
   CUSTOMER_WEALTH_BRACKET_HK: 'CUSTOMER_WEALTH_BRACKET_KEY'
-  CUSTOMER_CUSTOMER_WEALTH_BRACKET_HK:
-    - 'CUSTOMER_KEY'
-    - 'CUSTOMER_WEALTH_BRACKET_KEY'
-  CUSTOMER_HASHDIFF:
+  CUSTOMER_WEALTH_BRACKET_HASHDIFF:
     is_hashdiff: true
     columns:
-      - 'CUSTOMER_NUMBER'
-      - 'CUSTOMER_ID'
-      - 'FIRST_NAME'
-      - 'LAST_NAME'
-      - 'APPLIEDDATE'
-      - 'CRUD_FLAG'
-      - 'TITLE'
-      - 'WEALTH_BRACKET'
+      - 'NAME'
+      - 'DESCRIPTION'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}

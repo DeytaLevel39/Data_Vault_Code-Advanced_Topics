@@ -1,11 +1,11 @@
 select distinct
-CUSTOMER_ID,
-CUSTOMER_NUMBER,
-FIRST_NAME,
-LAST_NAME,
-LASTMODIFIEDDATE,
-CREATEDDATE,
-APPLIEDDATE,
-CRUD_FLAG
+c.CUSTOMER_ID,
+c.CUSTOMER_NUMBER,
+c.FIRST_NAME,
+c.LAST_NAME,
+c.LASTMODIFIEDDATE,
+c.CREATEDDATE,
+c.APPLIEDDATE,
+c.CRUD_FLAG
 from
-    {{ source('dbtvault_bigquery_demo', 'repl_US_customers') }}
+    {{ source('dbtvault_bigquery_demo', 'repl_US_customers') }} as c
