@@ -1,7 +1,7 @@
-{%- set source_model = "v_stg_customer_wealth_brackets"   -%}
+{%- set source_model = "v_stg_customer_wealth_bracket" -%}
 {%- set src_pk = "CUSTOMER_WEALTH_BRACKET_HK" -%}
 {%- set src_hashdiff = "CUSTOMER_WEALTH_BRACKET_HASHDIFF" -%}
-{%- set src_payload = ["NAME", "DESCRIPTION"] -%}
+{%- set src_payload = ["NAME","DESCRIPTION","LASTMODIFIEDDATE","CREATEDDATE"] -%}
 {%- set src_eff = "EFFECTIVE_FROM" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}

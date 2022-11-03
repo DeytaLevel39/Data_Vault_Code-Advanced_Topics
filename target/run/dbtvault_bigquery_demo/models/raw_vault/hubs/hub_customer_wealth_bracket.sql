@@ -14,7 +14,7 @@ WITH row_rank_1 AS (
                PARTITION BY rr.`CUSTOMER_WEALTH_BRACKET_HK`
                ORDER BY rr.`LOAD_DATE`
            ) AS row_number
-    FROM `steadfast-task-363413`.`data_vault`.`v_stg_customer_wealth_brackets` AS rr
+    FROM `steadfast-task-363413`.`data_vault`.`v_stg_customer_wealth_bracket` AS rr
     WHERE rr.`CUSTOMER_WEALTH_BRACKET_HK` IS NOT NULL
     QUALIFY row_number = 1
 ),

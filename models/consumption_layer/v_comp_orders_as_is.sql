@@ -6,7 +6,7 @@ with
          crud_flag, row_number() over(partition by order_hk order by lastmodifieddate desc) as rn
          from {{ ref('sat_order')}}),
     co as
-        (select order_hk, customer_hk from {{ref ('link_order_customer')}} ),
+        (select order_hk, customer_hk from {{ref ('link_customer_order')}} ),
     joined as
         (select h.order_hk, h.order_number,
             co.customer_hk,

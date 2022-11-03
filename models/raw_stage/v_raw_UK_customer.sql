@@ -9,8 +9,9 @@ c.APPLIEDDATE,
 c.CRUD_FLAG,
 c.TITLE,
 c.WEALTH_BRACKET,
-w.ID
+p.ID
 from
     {{ source('dbtvault_bigquery_demo', 'repl_UK_customers') }} as c
 left join
-    {{ source('dbtvault_bigquery_demo', 'repl_customer_wealth_brackets') }} as w on w.id = c.wealth_bracket
+    {{ source('dbtvault_bigquery_demo', 'repl_customer_wealth_brackets') }} as p
+on p.id = c.wealth_bracket

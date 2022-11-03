@@ -11,4 +11,3 @@ with
          from c, o
          where o.customer_hk = c.customer_hk)
 select * from joined
-

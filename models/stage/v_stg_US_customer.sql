@@ -1,23 +1,22 @@
 {%- set yaml_metadata -%}
-source_model: 'v_raw_orders'
+source_model: 'v_raw_US_customer'
 derived_columns:
-  ORDER_KEY: 'ORDER_NUMBER'
-  CUSTOMER_KEY: 'CUSTOMER_NUMBER'
-  RECORD_SOURCE: '!SALESFORCE'
+  US_CUSTOMER_KEY: 'CUSTOMER_NUMBER'
+  RECORD_SOURCE: '!101'
   EFFECTIVE_FROM: 'LASTMODIFIEDDATE'
 hashed_columns:
-  ORDER_HK: 'ORDER_KEY'
-  CUSTOMER_HK: 'CUSTOMER_KEY'
-  ORDER_CUSTOMER_HK:
-    - 'CUSTOMER_KEY'
-    - 'ORDER_KEY'
-  ORDER_HASHDIFF:
+  CUSTOMER_HK: 'US_CUSTOMER_KEY'
+  CUSTOMER_HASHDIFF:
     is_hashdiff: true
-    columns:
-      - 'ORDER_NUMBER'
-      - 'ORDER_ID'
-      - 'ORDER_PRICE'
-      - 'CRUD_FLAG'
+    columns: 
+    - CUSTOMER_ID
+    - CUSTOMER_NUMBER
+    - FIRST_NAME
+    - LAST_NAME
+    - LASTMODIFIEDDATE
+    - CREATEDDATE
+    - APPLIEDDATE
+    - CRUD_FLAG
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
