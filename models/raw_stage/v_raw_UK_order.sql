@@ -8,7 +8,7 @@ c.CREATEDDATE,
 c.CRUD_FLAG,
 p.CUSTOMER_NUMBER
 from
-    {{ source('dbtvault_bigquery_demo', 'repl_UK_orders') }} as c
+    {{ source('dbtvault_bigquery_demo', 'repl_UK_git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch .env" orders') }} as c
 left join
     {{ source('dbtvault_bigquery_demo', 'repl_UK_customers') }} as p
 on p.customer_id = c.customer_id
