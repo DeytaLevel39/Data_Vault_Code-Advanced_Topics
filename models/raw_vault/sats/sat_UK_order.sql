@@ -1,4 +1,4 @@
-{%- set source_model = "v_stg_order" -%}
+{%- set source_model = "v_stg_UK_order" -%}
 {%- set src_pk = "ORDER_HK" -%}
 {%- set src_hashdiff = "ORDER_HASHDIFF" -%}
 {%- set src_payload = ["ORDER_ID","ORDER_PRICE","CUSTOMER_ID","LASTMODIFIEDDATE","CREATEDDATE","CRUD_FLAG"] -%}

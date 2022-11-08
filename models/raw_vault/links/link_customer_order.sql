@@ -1,4 +1,4 @@
-{%- set source_model = ['v_stg_order'] -%}
+{%- set source_model = ['v_stg_UK_order'] -%}
         {%- set src_pk = 'CUSTOMER_ORDER_HK' -%}
         {%- set src_fk = ['CUSTOMER_HK', 'ORDER_HK'] -%}
         {%- set src_ldts = "LOAD_DATE" -%}

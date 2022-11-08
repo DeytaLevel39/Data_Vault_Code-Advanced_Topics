@@ -7,5 +7,5 @@ sources:
     tables:
       - name: repl_UK_customers
       - name: repl_US_customers
-      - name: repl_orders
+      - name: repl_UK_orders
       - name: repl_customer_wealth_brackets

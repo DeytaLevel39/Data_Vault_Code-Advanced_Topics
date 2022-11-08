@@ -1,12 +1,16 @@
-with
+
+
+  create or replace view `steadfast-task-363413`.`data_vault`.`v_comp_orders_as_is`
+  OPTIONS()
+  as with
     h as
-        (select order_hk, order_number, record_source from {{ ref('hub_order')}}),
+        (select order_hk, order_number, record_source from `steadfast-task-363413`.`data_vault`.`hub_order`),
     s as
         (select order_hk, order_id, order_price, lastmodifieddate, createddate, effective_from, load_date,
          crud_flag, row_number() over(partition by order_hk order by lastmodifieddate desc) as rn
-         from {{ ref('sat_UK_order')}}),
+         from `steadfast-task-363413`.`data_vault`.`sat_UK_order`),
     co as
-        (select order_hk, customer_hk from {{ref ('link_customer_order')}} ),
+        (select order_hk, customer_hk from `steadfast-task-363413`.`data_vault`.`link_customer_order` ),
     joined as
         (select h.order_hk, h.order_number,
             co.customer_hk,
@@ -18,4 +22,5 @@ with
 select order_hk, customer_hk, order_id, order_number, order_price, lastmodifieddate, createddate,
 effective_from, load_date
 from joined
-where rn = 1 and crud_flag <> 'D'
+where rn = 1 and crud_flag <> 'D';
+
