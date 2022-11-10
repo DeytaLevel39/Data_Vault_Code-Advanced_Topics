@@ -1,6 +1,0 @@
-id,name,description,lastmodifieddate,createddate
-5,Infrequent Buyer,"A customer who purchases goods, on average, less than once every 3 months",01/11/2022 10:59:37,01/11/2022 10:59:37
-2,VIP,A customer who is responsible for over 1% of our total sales,01/11/2022 10:59:37,01/11/2022 10:59:37
-1,Whale,A customer who is responsible for over 5% of our total sales,01/11/2022 10:59:37,01/11/2022 10:59:37
-3,High Value Buyer,A regular customer who buys more than our threshold value of goods per month,01/11/2022 10:59:37,01/11/2022 10:59:37
-4,Low Value Buyer,A regular customer who buys less than our threshold value of goods per month,01/11/2022 10:59:37,01/11/2022 10:59:37
