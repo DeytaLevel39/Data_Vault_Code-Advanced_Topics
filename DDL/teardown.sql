@@ -13,13 +13,13 @@ drop table data_vault.sat_UK_order;
 drop table data_vault.sat_UK_customer;
 drop table data_vault.sat_US_customer;
 drop table data_vault.sat_customer_wealth_bracket;
-drop table data_vault.link_order_customer;
-drop table data_vault.link_customer_customer_wealth_bracket;
+drop table data_vault.link_customer_order;
+drop table data_vault.link_customer_wealth_bracket_customer;
 drop table data_vault.hub_order;
 drop table data_vault.hub_customer;
 
 --drop the consumption layer views
-drop view consumption_layer.v_comp_customer_history;
-drop view consumption_layer.v_comp_customer_orders_as_is;
-drop view consumption_layer.v_comp_customers_as_is;
-drop view consumption_layer.v_comp_orders_as_is;
+drop view data_vault.v_comp_customer_history;
+drop view data_vault.v_comp_customer_orders_as_is;
+drop view data_vault.v_comp_customers_as_is;
+drop view data_vault.v_comp_orders_as_is;

@@ -91,6 +91,6 @@ SELECT * FROM columns_to_select
 )
 
 SELECT *,
-       '2009-11-05 08.36.0000000' AS LOAD_DATE
+       '2022-11-10 18.37.230000' AS LOAD_DATE
 FROM staging;
 

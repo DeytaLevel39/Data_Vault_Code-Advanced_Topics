@@ -26,6 +26,7 @@
                 row_number() over(partition by s_us.customer_hk order by s_us.applieddate desc) as rn
          from h, s_us
          )
-select customer_hk, customer_id, customer_number, title, first_name, last_name, wealth_bracket, lastmodifieddate, createddate, applieddate, effective_from, load_date, record_source from joined
+select customer_hk, customer_id, customer_number, title, first_name, last_name, wealth_bracket, lastmodifieddate, createddate, applieddate, effective_from, load_date, record_source
+from joined
 where rn = 1 and crud_flag <> 'D';
 
